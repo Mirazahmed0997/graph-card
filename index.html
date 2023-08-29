@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/88c2427c69.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+</head>
+<body>
+  <section class="body">
+    <section class="side-nav">
+        <div class="img1">
+            <img src="images/goal-word-with-targets-arrows_698953-9808.avif" alt="">
+        </div>
+        <div class="nav-bar">
+           <div class="nav">
+            <i class="fa-solid fa-gauge-high" style="color: #eaeaeb;"></i>
+            <a href="">Dashboard</a>
+           </div>
+           <div class="nav">           
+            <i class="fa-solid fa-building-columns" style="color: #f0f2f4;"></i>
+            <a href="">Institute</a><i class="fa-solid fa-angle-down" style="color: #e4e7ec; padding-left: 50px;"></i>
+           </div>
+        </div>
+    </section>
+    <section class="head-nav-bar">
+    <div>
+        <div class="head-nav">
+            <div>
+            <i class="fa-solid fa-bars"></i>
+            <a href="">Dashboard</a>
+            <a href="">Users</a>
+            <a href="">Settings</a>
+            </div>
+            <div class="btn">
+                <button>Login</button>
+            </div>
+           </div>
+           <div class="head-nav1">
+                <a href="">Home</a> <span>/</span>
+                <a style="color: rgba(128, 128, 128, 0.842);text-decoration: none;" href=""> Dashboard</a>
+           </div>
+           <div class="card-container">
+                <div class="card">
+                    <div class="card-title">
+                        <div>
+                        <h3>26k <small>(-12.4%)</small><br><p>Users</h3>
+                        </div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
+                    <div class="img">
+                        <img  src="images/Line-Chart-Vector-PNG-Cutout.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <div>
+                        <h3>26k <small>(-12.4%)</small><br><p>Users</h3>
+                        </div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
+                    <div class="img">
+                        <img  src="images/Line-Chart-Vector-PNG-Cutout.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <div>
+                        <h3>26k <small>(-12.4%)</small><br><p>Users</h3>
+                        </div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
+                    <div class="img">
+                        <img  src="images/Line-Chart-Vector-PNG-Cutout.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title">
+                        <div>
+                        <h3>26k <small>(-12.4%)</small><br><p>Users</h3>
+                        </div>
+                        <i class="fa-solid fa-ellipsis-vertical"></i> 
+                    </div>
+                    <div class="img">
+                        <img  src="images/Line-Chart-Vector-PNG-Cutout.png" alt="">
+                    </div>
+                </div>
+           </div>
+    </div>
+
+    <section class="graph-container">
+        <div class="graph-headline">
+            <div>
+                <h4>Traffic</h4>
+                <span>january-december 2021</span>
+            </div>
+            <div>
+                <input type="date" id="date" name="date">
+                <i class="fa-solid fa-cloud-arrow-down" style="color: #122be2;"></i>
+            </div>
+        </div>
+        <div class="graph" id="chart_div"></div>
+    </section>    
+    </section>
+  </section>
+</body>
+</html>
